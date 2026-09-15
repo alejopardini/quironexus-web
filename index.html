@@ -2,534 +2,275 @@
 <html lang="es-AR">
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>QuiroNexus — Gestión para consultorios de quiropraxia</title>
-  <meta name="description" content="QuiroNexus organiza turnos, pacientes e historia clínica de tu consultorio de quiropraxia. Con ficha vertebral interactiva y reserva pública para pacientes.">
-
-  <!-- Fonts -->
+  <meta name="description" content="QuiroNexus reúne agenda, pacientes e historia clínica en una herramienta pensada para consultorios de quiropraxia.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- Bootstrap 5.3.8 -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Bootstrap Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
-
-  <!-- CSS propio -->
   <link href="styles.css" rel="stylesheet">
 </head>
 <body>
-
-  <!-- ======= Header / Navbar ======= -->
-  <header id="header" class="header fixed-top">
-    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
-      <a href="#hero" class="logo d-flex align-items-center">
-        <span class="logo-mark"></span>
-        <span class="logo-text">QuiroNexus</span>
+  <header class="site-header" id="header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#hero" aria-label="QuiroNexus inicio">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>Quiro<span>Nexus</span></span>
       </a>
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="#hero" class="active">Inicio</a></li>
-          <li><a href="#features">Funciones</a></li>
-          <li><a href="#about">El problema</a></li>
-          <li><a href="#services">Beneficios</a></li>
-          <li><a href="#contact" class="nav-cta">Pedir acceso beta</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+
+      <nav class="nav" id="navmenu" aria-label="Navegación principal">
+        <a href="#producto">Producto</a>
+        <a href="#funciones">Funciones</a>
+        <a href="#como-funciona">Cómo funciona</a>
+        <a href="#contact" class="nav-cta">Probar beta</a>
       </nav>
+
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir menú" aria-expanded="false">
+        <i class="bi bi-list"></i>
+      </button>
     </div>
   </header>
 
-  <main class="main">
-
-    <!-- ======= Hero ======= -->
-    <section id="hero" class="hero section">
-      <div class="container">
-        <div class="row align-items-center gy-5">
-          <div class="col-lg-6">
-            <div class="hero-content">
-              <span class="hero-badge">
-                <span class="badge-dot"></span>
-                En prueba con consultorios reales
-              </span>
-              <h1>El consultorio de quiropraxia, ordenado de la cervical al sacro.</h1>
-              <p class="hero-sub">QuiroNexus reúne turnos, pacientes e historia clínica en un solo lugar. Con una ficha vertebral que registra cada ajuste segmento por segmento, como trabajás en la camilla.</p>
-              <div class="hero-actions">
-                <a href="#contact" class="btn btn-primary">Pedir acceso anticipado</a>
-                <a href="#features" class="btn btn-outline">Ver cómo funciona</a>
-              </div>
-              <p class="hero-note">Sin tarjeta. Probás con tus propios pacientes.</p>
-            </div>
+  <main>
+    <section class="hero" id="hero">
+      <div class="hero-grid-glow"></div>
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <div class="eyebrow"><span></span> Software diseñado para quiropraxia</div>
+          <h1>La historia de cada ajuste, <em>en una sola ficha.</em></h1>
+          <p class="hero-lead">Agenda, pacientes e historia clínica unidos en una herramienta pensada alrededor de cómo trabaja un quiropráctico.</p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary">Quiero probar QuiroNexus <i class="bi bi-arrow-right"></i></a>
+            <a href="#producto" class="btn btn-ghost">Ver cómo funciona</a>
           </div>
-          <div class="col-lg-6">
-            <div class="hero-visual">
-              <div class="mock mock-spine">
-                <div class="mock-head">
-                  <span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span>
-                  <span class="mock-title">Ficha vertebral · M. Álvarez</span>
+          <div class="hero-trust">
+            <span><i class="bi bi-check2"></i> En etapa beta</span>
+            <span><i class="bi bi-check2"></i> Sin instalación</span>
+            <span><i class="bi bi-check2"></i> Pensado para consultorios</span>
+          </div>
+        </div>
+
+        <div class="hero-product" aria-label="Demostración de ficha vertebral">
+          <div class="product-window">
+            <div class="window-top">
+              <div class="window-dots"><i></i><i></i><i></i></div>
+              <div class="window-title"><span class="status-dot"></span> QuiroNexus · Ficha clínica</div>
+              <span class="window-icon"><i class="bi bi-three-dots"></i></span>
+            </div>
+
+            <div class="product-content">
+              <div class="patient-strip">
+                <div class="patient-avatar">MA</div>
+                <div>
+                  <strong>María Álvarez</strong>
+                  <span>Ficha clínica · Última sesión hoy</span>
                 </div>
-                <div class="mock-body">
-                  <div class="spine-diagram">
-                    <svg viewBox="0 0 140 340" xmlns="http://www.w3.org/2000/svg">
-                      <line x1="70" y1="8" x2="70" y2="332" stroke="var(--qn-line)" stroke-width="2"/>
-                      <g class="seg" data-region="cervical">
-                        <ellipse cx="70" cy="30"  rx="20" ry="11"/>
-                        <ellipse cx="70" cy="58"  rx="21" ry="11"/>
-                        <ellipse cx="70" cy="86"  rx="22" ry="12"/>
-                        <ellipse cx="70" cy="116" rx="23" ry="12"/>
-                      </g>
-                      <g class="seg" data-region="dorsal">
-                        <ellipse cx="70" cy="150" rx="25" ry="13"/>
-                        <ellipse cx="70" cy="182" rx="26" ry="13"/>
-                        <ellipse cx="70" cy="214" rx="27" ry="14"/>
-                        <ellipse cx="70" cy="246" rx="27" ry="14"/>
-                      </g>
-                      <g class="seg" data-region="lumbar">
-                        <ellipse cx="70" cy="280" rx="28" ry="15"/>
-                        <ellipse cx="70" cy="312" rx="27" ry="14"/>
-                      </g>
-                    </svg>
+                <span class="patient-status">Paciente activo</span>
+              </div>
+
+              <div class="clinical-layout">
+                <div class="spine-panel">
+                  <div class="panel-heading">
+                    <div>
+                      <span class="mini-label">MAPA CLÍNICO</span>
+                      <h3>Ajustes vertebrales</h3>
+                    </div>
+                    <span class="save-state"><i class="bi bi-check-circle-fill"></i> Guardado</span>
                   </div>
-                  <ul class="spine-legend">
-                    <li><span class="chip chip-c"></span>Cervical · C1–C7</li>
-                    <li><span class="chip chip-d"></span>Dorsal · T1–T12</li>
-                    <li><span class="chip chip-l"></span>Lumbar · L1–L5</li>
-                  </ul>
-                </div>
-                <div class="mock-foot">
-                  <span class="pill pill-accent">Ajuste registrado</span>
-                  <span class="mock-meta">Última sesión: hoy, 10:42</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+                  <p class="panel-help">Seleccioná una vértebra para consultar su registro.</p>
 
-    <!-- ======= Stats ======= -->
-    <section id="stats" class="stats section">
-      <div class="container">
-        <div class="row gy-4">
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item">
-              <i class="bi bi-clipboard2-pulse"></i>
-              <span data-purecounter-start="0" data-purecounter-end="24" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Segmentos por ficha</p>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item">
-              <i class="bi bi-people"></i>
-              <span data-purecounter-start="0" data-purecounter-end="12" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Consultorios en beta</p>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item">
-              <i class="bi bi-calendar-check"></i>
-              <span data-purecounter-start="0" data-purecounter-end="8" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Módulos activos</p>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item">
-              <i class="bi bi-shield-check"></i>
-              <span>100%</span>
-              <p>Datos separados por consultorio</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ======= About / El problema ======= -->
-    <section id="about" class="about section">
-      <div class="container section-title" data-aos="fade-up">
-        <h2>El problema</h2>
-        <p>Cómo se trabaja hoy en la mayoría de los consultorios de quiropraxia</p>
-      </div>
-      <div class="container">
-        <div class="row gy-4 align-items-center">
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="about-content">
-              <h3>Planillas, cuadernos y WhatsApp</h3>
-              <p>La agenda en un cuaderno. Los datos de cada paciente en una planilla suelta. El historial clínico en la memoria de cada profesional. Y cuando llega un paciente nuevo, todo se anota en otro lado.</p>
-              <p>QuiroNexus reemplaza esa fragmentación con una sola herramienta, pensada para cómo trabaja un quiropráctico de verdad: rápido, en la camilla, entre paciente y paciente.</p>
-              <ul>
-                <li><i class="bi bi-check-circle-fill"></i> Turnos y camillas en tiempo real</li>
-                <li><i class="bi bi-check-circle-fill"></i> Historia clínica asociada a cada segmento</li>
-                <li><i class="bi bi-check-circle-fill"></i> Reserva pública para pacientes</li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="about-image">
-              <div class="mock mock-about">
-                <div class="mock-head">
-                  <span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span>
-                  <span class="mock-title">Agenda del día</span>
-                </div>
-                <div class="mock-body">
-                  <div class="mini-agenda">
-                    <div class="mini-slot"><span class="time">09:00</span><span class="bar bar-1"></span><span class="who">J. Pérez</span></div>
-                    <div class="mini-slot"><span class="time">09:30</span><span class="bar bar-2"></span><span class="who">M. Ruiz</span></div>
-                    <div class="mini-slot active"><span class="time">10:00</span><span class="bar bar-1"></span><span class="who">L. Sosa</span></div>
-                    <div class="mini-slot"><span class="time">10:30</span><span class="bar bar-3"></span><span class="who">—</span></div>
-                    <div class="mini-slot"><span class="time">11:00</span><span class="bar bar-1"></span><span class="who">D. Vidal</span></div>
+                  <div class="spine-stage" id="spineStage">
+                    <img src="columna-spine.png" alt="Columna vertebral interactiva de QuiroNexus" class="spine-image">
+                    <div class="spine-hotspots" id="spineHotspots" aria-label="Vértebras seleccionables"></div>
                   </div>
                 </div>
+
+                <aside class="adjustment-panel" id="adjustmentPanel">
+                  <span class="mini-label">REGISTRO DEL SEGMENTO</span>
+                  <div class="segment-title-row">
+                    <h3 id="segmentName">C5</h3>
+                    <span class="adjusted-badge"><i class="bi bi-check2"></i> Ajustado</span>
+                  </div>
+                  <div class="data-group">
+                    <span>Listado</span>
+                    <strong id="segmentListing">PR</strong>
+                  </div>
+                  <div class="data-group">
+                    <span>Técnica</span>
+                    <strong id="segmentTechnique">Gonstead</strong>
+                  </div>
+                  <div class="data-group">
+                    <span>Último registro</span>
+                    <strong id="segmentDate">Hoy · 10:42</strong>
+                  </div>
+                  <div class="note-box">
+                    <span>Nota clínica</span>
+                    <p id="segmentNote">Ajuste registrado durante la sesión. Evolución favorable.</p>
+                  </div>
+                  <button class="panel-link" type="button" id="nextSegment">Explorar otro segmento <i class="bi bi-arrow-right"></i></button>
+                </aside>
               </div>
             </div>
           </div>
+          <div class="floating-chip chip-one"><i class="bi bi-lightning-charge-fill"></i> Registro rápido</div>
+          <div class="floating-chip chip-two"><i class="bi bi-shield-check"></i> Datos protegidos</div>
+        </div>
+      </div>
+      <div class="hero-bottom-line"></div>
+    </section>
+
+    <section class="statement section" id="producto">
+      <div class="container statement-grid">
+        <div class="section-kicker">HECHO PARA EL CONSULTORIO</div>
+        <div>
+          <h2>No adaptamos un software genérico a la quiropraxia. <span>Diseñamos alrededor de ella.</span></h2>
+          <p>La agenda, la ficha del paciente y el seguimiento clínico tienen que hablar el mismo idioma. QuiroNexus nace desde esa lógica.</p>
         </div>
       </div>
     </section>
 
-    <!-- ======= Features / Módulos del producto ======= -->
-    <section id="features" class="features section">
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Todo lo que pasa entre un paciente y el siguiente</h2>
-        <p>Cada módulo está pensado para el ritmo de un consultorio de quiropraxia</p>
-      </div>
-
+    <section class="pillars section-light" id="funciones">
       <div class="container">
-        <div class="row gy-4">
-
-          <!-- Módulo 1: Ficha vertebral -->
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="feature-card">
-              <div class="feature-icon"><i class="bi bi-body-text"></i></div>
-              <h3>Ficha vertebral interactiva</h3>
-              <p>Cada paciente tiene su propia columna. Marcás qué segmento trabajaste, qué técnica usaste y cómo evoluciona. El historial queda ordenado por fecha y por zona.</p>
-              <div class="feature-mock mini-spine">
-                <div class="mini-row"><span class="tag tag-c">C1</span><span class="mini-bar"></span><span class="mini-dot on"></span></div>
-                <div class="mini-row"><span class="tag tag-c">C4</span><span class="mini-bar"></span><span class="mini-dot on"></span></div>
-                <div class="mini-row"><span class="tag tag-d">T3</span><span class="mini-bar short"></span><span class="mini-dot"></span></div>
-                <div class="mini-row"><span class="tag tag-d">T7</span><span class="mini-bar short"></span><span class="mini-dot on"></span></div>
-                <div class="mini-row"><span class="tag tag-l">L4</span><span class="mini-bar"></span><span class="mini-dot on"></span></div>
-              </div>
-            </div>
+        <div class="section-heading">
+          <div>
+            <span class="section-kicker">TRES PILARES</span>
+            <h2>Menos administración.<br><span>Más tiempo en la camilla.</span></h2>
           </div>
+          <p>Todo lo esencial del consultorio, conectado en un mismo lugar.</p>
+        </div>
 
-          <!-- Módulo 2: Turnos -->
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="feature-card">
-              <div class="feature-icon"><i class="bi bi-calendar2-week"></i></div>
-              <h3>Turnos y camillas</h3>
-              <p>Turnos pendientes y confirmados, pacientes que llegan sin aviso, y camillas que no se pueden pisar entre sí. Ves qué está pasando ahora, no lo que estaba agendado la semana pasada.</p>
-              <div class="feature-mock mini-agenda">
-                <div class="mini-slot"><span class="time">09:00</span><span class="bar bar-1"></span><span class="who">J. Pérez</span></div>
-                <div class="mini-slot"><span class="time">09:30</span><span class="bar bar-2"></span><span class="who">M. Ruiz</span></div>
-                <div class="mini-slot active"><span class="time">10:00</span><span class="bar bar-1"></span><span class="who">L. Sosa</span></div>
-                <div class="mini-slot"><span class="time">10:30</span><span class="bar bar-3"></span><span class="who">—</span></div>
-              </div>
+        <div class="pillar-grid">
+          <article class="pillar-card pillar-main">
+            <div class="pillar-number">01</div>
+            <div class="pillar-icon"><i class="bi bi-bounding-box-circles"></i></div>
+            <h3>Historia clínica que entiende la columna</h3>
+            <p>Registrá ajustes, listados, técnicas y notas por segmento. La evolución del paciente deja de depender de una hoja suelta o de la memoria.</p>
+            <div class="pillar-visual vertebral-mini">
+              <span class="mini-vertebra active">C5</span><span class="mini-vertebra">T3</span><span class="mini-vertebra active">T7</span><span class="mini-vertebra">L4</span>
             </div>
-          </div>
+          </article>
 
-          <!-- Módulo 3: Calendario -->
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="feature-card">
-              <div class="feature-icon"><i class="bi bi-calendar3"></i></div>
-              <h3>Calendario integrado</h3>
-              <p>Mini calendario lateral y modal rápido para crear turnos sin salir de lo que estabas mirando. Pensado para el hueco de 20 segundos entre paciente y paciente.</p>
-              <div class="feature-mock mini-cal">
-                <div class="cal-head">Noviembre</div>
-                <div class="cal-grid">
-                  <span>L</span><span>M</span><span>M</span><span>J</span><span>V</span><span>S</span><span>D</span>
-                  <span class="muted">28</span><span class="muted">29</span><span class="muted">30</span><span class="muted">31</span><span>1</span><span>2</span><span>3</span>
-                  <span>4</span><span>5</span><span>6</span><span class="today">7</span><span>8</span><span>9</span><span>10</span>
-                  <span>11</span><span class="has">12</span><span>13</span><span class="has">14</span><span>15</span><span>16</span><span>17</span>
-                </div>
-              </div>
+          <article class="pillar-card">
+            <div class="pillar-number">02</div>
+            <div class="pillar-icon"><i class="bi bi-calendar3"></i></div>
+            <h3>Agenda sin fricción</h3>
+            <p>Turnos, disponibilidad y organización del consultorio desde una agenda clara y rápida de usar.</p>
+            <div class="pillar-visual agenda-mini">
+              <div><span>09:00</span><b>J. Pérez</b></div>
+              <div><span>09:30</span><b>M. Ruiz</b></div>
+              <div class="selected"><span>10:00</span><b>L. Sosa</b></div>
+              <div><span>10:30</span><b>Disponible</b></div>
             </div>
-          </div>
+          </article>
 
-          <!-- Módulo 4: Planes -->
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="feature-card">
-              <div class="feature-icon"><i class="bi bi-list-check"></i></div>
-              <h3>Planes de tratamiento</h3>
-              <p>Definís una vez la fase, la frecuencia y el tipo de turno. Después la aplicás a todos los pacientes que entren en ese plan. Menos copiar y pegar, más tiempo con el paciente.</p>
-              <div class="feature-mock mini-plan">
-                <div class="plan-step done"><span class="step-num">1</span><div><strong>Fase aguda</strong><span>3 sesiones / semana · 2 semanas</span></div></div>
-                <div class="plan-step current"><span class="step-num">2</span><div><strong>Fase de corrección</strong><span>2 sesiones / semana · 4 semanas</span></div></div>
-                <div class="plan-step"><span class="step-num">3</span><div><strong>Mantenimiento</strong><span>1 sesión / quincena · continuo</span></div></div>
-              </div>
+          <article class="pillar-card">
+            <div class="pillar-number">03</div>
+            <div class="pillar-icon"><i class="bi bi-people"></i></div>
+            <h3>Un consultorio, un sistema</h3>
+            <p>Pacientes, profesionales y permisos organizados para trabajar solo o en equipo.</p>
+            <div class="pillar-visual team-mini">
+              <div class="team-row"><span class="avatar">MP</span><div><b>Dra. Molina</b><small>Acceso total</small></div><i class="bi bi-check-circle-fill"></i></div>
+              <div class="team-row"><span class="avatar">JR</span><div><b>Lic. Ramírez</b><small>Agenda y pacientes</small></div><i class="bi bi-check-circle-fill"></i></div>
             </div>
-          </div>
-
-          <!-- Módulo 5: Permisos -->
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="feature-card">
-              <div class="feature-icon"><i class="bi bi-person-badge"></i></div>
-              <h3>Permisos por profesional</h3>
-              <p>En consultorios con equipo, no todos necesitan los mismos permisos. Definís quién crea turnos, quién carga pacientes, quién ve la historia clínica completa.</p>
-              <div class="feature-mock mini-perms">
-                <div class="perm-row"><span class="avatar">MP</span><div><strong>Dra. Molina</strong><span>Acceso total</span></div><span class="toggle on"></span></div>
-                <div class="perm-row"><span class="avatar">JR</span><div><strong>Lic. Ramírez</strong><span>Turnos y pacientes</span></div><span class="toggle on"></span></div>
-                <div class="perm-row"><span class="avatar">SG</span><div><strong>S. Gómez</strong><span>Solo agenda</span></div><span class="toggle"></span></div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Módulo 6: Reserva pública -->
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="feature-card">
-              <div class="feature-icon"><i class="bi bi-globe2"></i></div>
-              <h3>Reserva pública</h3>
-              <p>Un link propio del consultorio. El paciente elige día y horario disponible, deja sus datos, y el turno entra directo a tu agenda.</p>
-              <div class="feature-mock mini-booking">
-                <div class="book-head">Reservar turno</div>
-                <div class="book-slots">
-                  <span class="slot">09:00</span>
-                  <span class="slot">09:30</span>
-                  <span class="slot selected">10:00</span>
-                  <span class="slot">10:30</span>
-                  <span class="slot muted">11:00</span>
-                  <span class="slot">11:30</span>
-                </div>
-                <div class="book-cta">Confirmar turno</div>
-              </div>
-            </div>
-          </div>
-
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- ======= Services / Beneficios ======= -->
-    <section id="services" class="services section">
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Por qué QuiroNexus</h2>
-        <p>Lo que hace que un quiropráctico lo adopte en una tarde</p>
-      </div>
+    <section class="workflow section" id="como-funciona">
       <div class="container">
-        <div class="row gy-4">
-          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-item">
-              <div class="service-icon"><i class="bi bi-lightning-charge"></i></div>
-              <h3>Rápido de aprender</h3>
-              <p>Abrís, cargás un turno, registrás un ajuste. Sin manual, sin capacitación de tres días.</p>
-            </div>
+        <div class="section-heading centered">
+          <span class="section-kicker">ASÍ SE USA</span>
+          <h2>De la agenda al ajuste.<br><span>Sin cambiar de lugar.</span></h2>
+          <p>La información acompaña al paciente durante todo el recorrido.</p>
+        </div>
+
+        <div class="workflow-line">
+          <div class="workflow-step">
+            <span class="step-index">01</span>
+            <div class="step-icon"><i class="bi bi-calendar-check"></i></div>
+            <h3>Agendás</h3>
+            <p>Ves disponibilidad y asignás el turno.</p>
           </div>
-          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-item">
-              <div class="service-icon"><i class="bi bi-cloud-arrow-up"></i></div>
-              <h3>Sin instalación</h3>
-              <p>Funciona en el navegador. Desde la computadora del consultorio o desde el celular en la camilla.</p>
-            </div>
+          <div class="workflow-connector"></div>
+          <div class="workflow-step">
+            <span class="step-index">02</span>
+            <div class="step-icon"><i class="bi bi-person-vcard"></i></div>
+            <h3>Abrís la ficha</h3>
+            <p>Todo el historial del paciente en segundos.</p>
           </div>
-          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-item">
-              <div class="service-icon"><i class="bi bi-people"></i></div>
-              <h3>Multi-profesional</h3>
-              <p>Consultorio individual o con equipo. Cada profesional con su nivel de acceso y su agenda.</p>
-            </div>
+          <div class="workflow-connector"></div>
+          <div class="workflow-step featured">
+            <span class="step-index">03</span>
+            <div class="step-icon"><i class="bi bi-body-text"></i></div>
+            <h3>Registrás</h3>
+            <p>Marcás el segmento, la técnica y la evolución.</p>
           </div>
-          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="service-item">
-              <div class="service-icon"><i class="bi bi-shield-lock"></i></div>
-              <h3>Datos separados</h3>
-              <p>La información de cada consultorio queda aislada del resto. Historia clínica y pacientes, bajo tu control.</p>
-            </div>
+          <div class="workflow-connector"></div>
+          <div class="workflow-step">
+            <span class="step-index">04</span>
+            <div class="step-icon"><i class="bi bi-graph-up-arrow"></i></div>
+            <h3>Seguís</h3>
+            <p>La próxima sesión empieza donde terminó la anterior.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ======= Testimonials ======= -->
-    <section id="testimonials" class="testimonials section">
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Quiroprácticos que ya lo están probando</h2>
-        <p>Frases de los profesionales en etapa beta</p>
-      </div>
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="swiper init-swiper">
-          <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 600,
-              "autoplay": { "delay": 5000 },
-              "slidesPerView": "auto",
-              "pagination": { "el": ".swiper-pagination", "type": "bullets", "clickable": true },
-              "breakpoints": {
-                "320": { "slidesPerView": 1, "spaceBetween": 40 },
-                "1200": { "slidesPerView": 2, "spaceBetween": 20 }
-              }
-            }
-          </script>
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p><i class="bi bi-quote quote-icon-left"></i>
-                  <span>Antes anotaba todo en un cuaderno. Ahora abro la ficha del paciente y veo exactamente qué trabajé la sesión anterior y cómo evolucionó.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-                <img src="https://ui-avatars.com/api/?name=Martin+G&background=26457A&color=fff&size=80" class="testimonial-img" alt="">
-                <h3>Martín G.</h3>
-                <h4>Quiropráctico · La Plata</h4>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p><i class="bi bi-quote quote-icon-left"></i>
-                  <span>Lo que más me sirve es el calendario. Cargo un turno en el medio de una consulta sin cortar lo que estoy haciendo. Eso antes no lo podía hacer.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-                <img src="https://ui-avatars.com/api/?name=Laura+S&background=59C2BF&color=fff&size=80" class="testimonial-img" alt="">
-                <h3>Laura S.</h3>
-                <h4>Quiropráctica · CABA</h4>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p><i class="bi bi-quote quote-icon-left"></i>
-                  <span>Tenemos tres profesionales en el consultorio y cada uno ve lo que le corresponde. No se pisan los turnos ni las camillas. Eso solo ya justifica el cambio.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-                <img src="https://ui-avatars.com/api/?name=Consultorio+V&background=3E9E9B&color=fff&size=80" class="testimonial-img" alt="">
-                <h3>Consultorio Vidal</h3>
-                <h4>Equipo de quiroprácticos · Rosario</h4>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-pagination"></div>
+    <section class="beta-banner">
+      <div class="container beta-inner">
+        <div>
+          <span class="section-kicker">ETAPA BETA</span>
+          <h2>Estamos construyendo QuiroNexus con quienes lo van a usar.</h2>
+          <p>Queremos conocer cómo funciona tu consultorio y qué necesitás realmente.</p>
         </div>
+        <a href="#contact" class="btn btn-light">Quiero participar <i class="bi bi-arrow-right"></i></a>
       </div>
     </section>
 
-    <!-- ======= CTA final ======= -->
-    <section id="cta" class="cta section">
-      <div class="container" data-aos="zoom-in">
-        <div class="cta-inner">
-          <h2>¿Tenés consultorio y querés probarlo?</h2>
-          <p>QuiroNexus está en etapa de prueba con quiroprácticos reales. Si querés sumarte o contarnos cómo trabajás, dejá tus datos y te escribimos.</p>
-          <a href="#contact" class="btn btn-primary btn-lg">Pedir acceso beta</a>
+    <section class="contact section-light" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-copy">
+          <span class="section-kicker">ACCESO ANTICIPADO</span>
+          <h2>¿Querés probar<br><span>QuiroNexus?</span></h2>
+          <p>Dejanos tus datos. Te contactamos para conocer tu consultorio y coordinar el acceso a la beta.</p>
+          <div class="contact-detail"><i class="bi bi-envelope"></i><span>hola@quironexus.com</span></div>
+          <div class="contact-detail"><i class="bi bi-geo-alt"></i><span>Argentina</span></div>
         </div>
+
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="form-row">
+            <label>Nombre y apellido<input type="text" name="name" required autocomplete="name"></label>
+            <label>Email<input type="email" name="email" required autocomplete="email"></label>
+          </div>
+          <div class="form-row">
+            <label>Tipo de consultorio
+              <select name="clinic">
+                <option value="individual">Profesional individual</option>
+                <option value="equipo">Equipo de varios profesionales</option>
+              </select>
+            </label>
+            <label>Ciudad<input type="text" name="city" autocomplete="address-level2"></label>
+          </div>
+          <label>Contanos cómo trabajás hoy <span>(opcional)</span><textarea name="message" rows="4"></textarea></label>
+          <button class="btn btn-primary btn-submit" type="submit">Enviar solicitud <i class="bi bi-arrow-right"></i></button>
+          <p class="form-note" id="formNote" role="status"></p>
+        </form>
       </div>
     </section>
-
-    <!-- ======= Contact ======= -->
-    <section id="contact" class="contact section">
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Acceso beta</h2>
-        <p>Dejanos tus datos y te contactamos para coordinar la prueba</p>
-      </div>
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="row gy-4">
-          <div class="col-lg-5">
-            <div class="contact-info">
-              <div class="info-item d-flex">
-                <i class="bi bi-envelope"></i>
-                <div>
-                  <h4>Email</h4>
-                  <p>hola@quironexus.com</p>
-                </div>
-              </div>
-              <div class="info-item d-flex">
-                <i class="bi bi-geo-alt"></i>
-                <div>
-                  <h4>Ubicación</h4>
-                  <p>Argentina</p>
-                </div>
-              </div>
-              <div class="info-item d-flex">
-                <i class="bi bi-info-circle"></i>
-                <div>
-                  <h4>Estado</h4>
-                  <p>Producto en beta · No disponible al público</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-7">
-            <form id="contactForm" class="contact-form" novalidate>
-              <div class="row gy-3">
-                <div class="col-md-6">
-                  <label for="name" class="form-label">Nombre y apellido</label>
-                  <input type="text" id="name" name="name" class="form-control" required autocomplete="name">
-                </div>
-                <div class="col-md-6">
-                  <label for="email" class="form-label">Email</label>
-                  <input type="email" id="email" name="email" class="form-control" required autocomplete="email">
-                </div>
-                <div class="col-md-6">
-                  <label for="clinic" class="form-label">Tipo de consultorio</label>
-                  <select id="clinic" name="clinic" class="form-select">
-                    <option value="individual">Profesional individual</option>
-                    <option value="equipo">Equipo de varios profesionales</option>
-                  </select>
-                </div>
-                <div class="col-md-6">
-                  <label for="city" class="form-label">Ciudad</label>
-                  <input type="text" id="city" name="city" class="form-control" autocomplete="address-level2">
-                </div>
-                <div class="col-12">
-                  <label for="message" class="form-label">Contanos un poco cómo trabajás hoy <span class="text-muted">(opcional)</span></label>
-                  <textarea id="message" name="message" class="form-control" rows="4"></textarea>
-                </div>
-                <div class="col-12 text-center">
-                  <button type="submit" class="btn btn-primary">Enviar solicitud</button>
-                </div>
-                <div class="col-12">
-                  <p id="formNote" class="form-note" role="status"></p>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-
   </main>
 
-  <!-- ======= Footer ======= -->
-  <footer id="footer" class="footer">
-    <div class="container footer-top">
-      <div class="row gy-4">
-        <div class="col-lg-4 col-md-6 footer-about">
-          <a href="#hero" class="logo d-flex align-items-center">
-            <span class="logo-mark"></span>
-            <span class="logo-text">QuiroNexus</span>
-          </a>
-          <p>Gestión para consultorios de quiropraxia. Turnos, pacientes e historia clínica en un solo lugar.</p>
-        </div>
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Producto</h4>
-          <ul>
-            <li><a href="#features">Funciones</a></li>
-            <li><a href="#about">El problema</a></li>
-            <li><a href="#services">Beneficios</a></li>
-          </ul>
-        </div>
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Contacto</h4>
-          <ul>
-            <li><a href="mailto:hola@quironexus.com">hola@quironexus.com</a></li>
-            <li><a href="#contact">Acceso beta</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="container copyright text-center mt-4">
-      <p>© <span>2026</span> <strong class="px-1">QuiroNexus</strong>. Producto en beta · Argentina.</p>
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a class="brand" href="#hero"><span class="brand-mark"><span></span></span><span>Quiro<span>Nexus</span></span></a>
+      <p>Gestión para consultorios de quiropraxia.</p>
+      <div class="footer-links"><a href="#producto">Producto</a><a href="#funciones">Funciones</a><a href="#contact">Beta</a><a href="mailto:hola@quironexus.com">Contacto</a></div>
+      <div class="copyright">© 2026 QuiroNexus · Producto en beta · Argentina.</div>
     </div>
   </footer>
 
-  <!-- Scroll top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Vendor JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/purecounterjs@1.5.0/dist/purecounter_vanilla.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-  <!-- Main JS -->
+  <button class="scroll-top" id="scrollTop" aria-label="Volver arriba"><i class="bi bi-arrow-up"></i></button>
   <script src="script.js"></script>
-
 </body>
 </html>
