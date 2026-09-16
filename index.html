@@ -2,7 +2,6 @@
 <html lang="es-AR">
 <head>
   <meta charset="utf-8">
-  <link rel="icon" type="image/png" href="favicon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>QuiroNexus — Gestión para consultorios de quiropraxia</title>
   <meta name="description" content="QuiroNexus reúne agenda, pacientes e historia clínica en una herramienta pensada para consultorios de quiropraxia.">
@@ -10,19 +9,22 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
   <link href="styles.css" rel="stylesheet">
 </head>
 <body>
   <header class="site-header" id="header">
     <div class="container nav-wrap">
       <a class="brand" href="#hero" aria-label="QuiroNexus inicio">
-        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <img src="logo-sintexto.png" alt="" class="brand-logo" aria-hidden="true">
         <span>Quiro<span>Nexus</span></span>
       </a>
 
       <nav class="nav" id="navmenu" aria-label="Navegación principal">
         <a href="#producto">Producto</a>
         <a href="#funciones">Funciones</a>
+        <a href="#capacidades">Más herramientas</a>
         <a href="#precios">Precios</a>
         <a href="#como-funciona">Cómo funciona</a>
         <a href="https://app.quironexus.com/" class="nav-login">Ingresar</a>
@@ -49,8 +51,8 @@
           </div>
           <div class="hero-trust">
             <span><i class="bi bi-check2"></i> Sin instalación</span>
+            <span><i class="bi bi-check2"></i> Acceso desde cualquier lugar</span>
             <span><i class="bi bi-check2"></i> Pensado para consultorios</span>
-            <span><i class="bi bi-check2"></i> Agenda + ficha clínica</span>
           </div>
         </div>
 
@@ -231,6 +233,66 @@
       </div>
     </section>
 
+    <section class="pricing section-light" id="precios">
+      <div class="container">
+        <div class="section-heading centered">
+          <span class="section-kicker">PRECIOS</span>
+          <h2>Elegí el plan que <span>acompaña a tu consultorio.</span></h2>
+          <p>Empezá con la estructura que necesitás hoy y elegí el nivel de organización que mejor se adapte a tu equipo.</p>
+        </div>
+
+        <div class="pricing-grid">
+          <article class="pricing-card">
+            <span class="pricing-label">PARA EMPEZAR</span>
+            <h3>Independiente</h3>
+            <p class="pricing-description">Para profesionales que trabajan de manera individual.</p>
+            <div class="pricing-price"><strong>$20.000</strong><span>/ mes</span></div>
+            <ul>
+              <li><i class="bi bi-check2"></i> 1 profesional</li>
+              <li><i class="bi bi-check2"></i> 1 sede</li>
+            </ul>
+            <a class="btn btn-ghost pricing-btn" href="https://app.quironexus.com/registro?plan=independiente">Elegir plan <i class="bi bi-arrow-right"></i></a>
+          </article>
+
+          <article class="pricing-card">
+            <span class="pricing-label">EQUIPO</span>
+            <h3>Consultorio</h3>
+            <p class="pricing-description">Para equipos pequeños que comparten pacientes y organización.</p>
+            <div class="pricing-price"><strong>$30.000</strong><span>/ mes</span></div>
+            <ul>
+              <li><i class="bi bi-check2"></i> Hasta 3 profesionales</li>
+              <li><i class="bi bi-check2"></i> Hasta 2 sedes</li>
+            </ul>
+            <a class="btn btn-ghost pricing-btn" href="https://app.quironexus.com/registro?plan=consultorio">Elegir plan <i class="bi bi-arrow-right"></i></a>
+          </article>
+
+          <article class="pricing-card pricing-featured">
+            <span class="pricing-label">CLÍNICA</span>
+            <h3>Clínica</h3>
+            <p class="pricing-description">Para organizaciones con varios profesionales y más estructura.</p>
+            <div class="pricing-price"><strong>$40.000</strong><span>/ mes</span></div>
+            <ul>
+              <li><i class="bi bi-check2"></i> Hasta 5 profesionales</li>
+              <li><i class="bi bi-check2"></i> Hasta 2 sedes</li>
+            </ul>
+            <a class="btn btn-primary pricing-btn" href="https://app.quironexus.com/registro?plan=clinica">Elegir plan <i class="bi bi-arrow-right"></i></a>
+          </article>
+
+          <article class="pricing-card">
+            <span class="pricing-label">MAYOR ESTRUCTURA</span>
+            <h3>Clínica Plus</h3>
+            <p class="pricing-description">Para clínicas que necesitan mayor capacidad y más sedes.</p>
+            <div class="pricing-price"><strong>$75.000</strong><span>/ mes</span></div>
+            <ul>
+              <li><i class="bi bi-check2"></i> Hasta 10 profesionales</li>
+              <li><i class="bi bi-check2"></i> Hasta 3 sedes</li>
+            </ul>
+            <a class="btn btn-ghost pricing-btn" href="https://app.quironexus.com/registro?plan=clinica-plus">Elegir plan <i class="bi bi-arrow-right"></i></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section class="zoe-strip section-light">
       <div class="container zoe-inner">
         <div class="zoe-avatar">Z</div>
@@ -283,86 +345,12 @@
       </div>
     </section>
 
-    <section class="pricing section-light" id="precios">
-      <div class="container">
-        <div class="section-heading centered">
-          <span class="section-kicker">PRECIOS</span>
-          <h2>Elegí el plan que <span>mejor encaja con tu consultorio.</span></h2>
-          <p>Empezá con la estructura que necesitás hoy y elegí el nivel de equipo que acompaña tu crecimiento.</p>
-        </div>
-
-        <div class="pricing-grid">
-          <article class="price-card">
-            <div class="price-top">
-              <span class="price-name">Independiente</span>
-              <span class="price-fit">1 profesional</span>
-            </div>
-            <div class="price-value"><strong>$20.000</strong><span>/ mes</span></div>
-            <p class="price-description">Para profesionales que trabajan de forma independiente.</p>
-            <ul class="price-features">
-              <li><i class="bi bi-check2"></i> 1 profesional</li>
-              <li><i class="bi bi-check2"></i> 1 sede</li>
-              <li><i class="bi bi-check2"></i> Agenda y ficha clínica</li>
-            </ul>
-            <a class="btn btn-price" href="https://app.quironexus.com/registro?plan=independiente">Elegir plan <i class="bi bi-arrow-right"></i></a>
-          </article>
-
-          <article class="price-card price-featured">
-            <div class="price-ribbon">CONSULTORIO</div>
-            <div class="price-top">
-              <span class="price-name">Consultorio</span>
-              <span class="price-fit">Hasta 3 profesionales</span>
-            </div>
-            <div class="price-value"><strong>$30.000</strong><span>/ mes</span></div>
-            <p class="price-description">Para equipos chicos que comparten pacientes y organización.</p>
-            <ul class="price-features">
-              <li><i class="bi bi-check2"></i> Hasta 3 profesionales</li>
-              <li><i class="bi bi-check2"></i> Hasta 2 sedes</li>
-              <li><i class="bi bi-check2"></i> Gestión de equipo</li>
-            </ul>
-            <a class="btn btn-price btn-price-primary" href="https://app.quironexus.com/registro?plan=consultorio">Elegir plan <i class="bi bi-arrow-right"></i></a>
-          </article>
-
-          <article class="price-card">
-            <div class="price-top">
-              <span class="price-name">Clínica</span>
-              <span class="price-fit">Hasta 5 profesionales</span>
-            </div>
-            <div class="price-value"><strong>$40.000</strong><span>/ mes</span></div>
-            <p class="price-description">Para clínicas que necesitan una estructura de trabajo más amplia.</p>
-            <ul class="price-features">
-              <li><i class="bi bi-check2"></i> Hasta 5 profesionales</li>
-              <li><i class="bi bi-check2"></i> Hasta 2 sedes</li>
-              <li><i class="bi bi-check2"></i> Organización por profesionales</li>
-            </ul>
-            <a class="btn btn-price" href="https://app.quironexus.com/registro?plan=clinica">Elegir plan <i class="bi bi-arrow-right"></i></a>
-          </article>
-
-          <article class="price-card">
-            <div class="price-top">
-              <span class="price-name">Clínica Plus</span>
-              <span class="price-fit">Hasta 10 profesionales</span>
-            </div>
-            <div class="price-value"><strong>$75.000</strong><span>/ mes</span></div>
-            <p class="price-description">Para equipos más grandes y una operación con varias sedes.</p>
-            <ul class="price-features">
-              <li><i class="bi bi-check2"></i> Hasta 10 profesionales</li>
-              <li><i class="bi bi-check2"></i> Hasta 3 sedes</li>
-              <li><i class="bi bi-check2"></i> Gestión de estructura ampliada</li>
-            </ul>
-            <a class="btn btn-price" href="https://app.quironexus.com/registro?plan=clinica-plus">Elegir plan <i class="bi bi-arrow-right"></i></a>
-          </article>
-        </div>
-        <p class="pricing-note"><i class="bi bi-lock"></i> La contratación y gestión de tu cuenta se realizan desde QuiroNexus.</p>
-      </div>
-    </section>
-
     <section class="contact section-light" id="contact">
       <div class="container contact-grid">
         <div class="contact-copy">
           <span class="section-kicker">¿TENÉS DUDAS?</span>
           <h2>Hablemos de<br><span>tu consultorio.</span></h2>
-          <p>Si querés conocer mejor QuiroNexus antes de comenzar, escribinos y contanos cómo trabajás hoy.</p>
+          <p>Si querés conocer mejor QuiroNexus, consultar sobre los planes o contarnos cómo trabajás hoy, escribinos.</p>
           <div class="contact-detail"><i class="bi bi-envelope"></i><span>quironexus@gmail.com</span></div>
           <div class="contact-detail"><i class="bi bi-geo-alt"></i><span>Argentina</span></div>
         </div>
@@ -382,7 +370,7 @@
             <label>Ciudad<input type="text" name="city" autocomplete="address-level2"></label>
           </div>
           <label>Contanos cómo trabajás hoy <span>(opcional)</span><textarea name="message" rows="4"></textarea></label>
-          <button class="btn btn-primary btn-submit" type="submit">Contactar a QuiroNexus <i class="bi bi-arrow-right"></i></button>
+          <button class="btn btn-primary btn-submit" type="submit">Enviar consulta <i class="bi bi-arrow-right"></i></button>
           <p class="form-note" id="formNote" role="status"></p>
         </form>
       </div>
@@ -391,10 +379,10 @@
 
   <footer class="footer">
     <div class="container footer-inner">
-      <a class="brand" href="#hero"><span class="brand-mark"><span></span></span><span>Quiro<span>Nexus</span></span></a>
+      <a class="brand" href="#hero"><img src="logo-sintexto.png" alt="" class="brand-logo" aria-hidden="true"><span>Quiro<span>Nexus</span></span></a>
       <p>Gestión para consultorios de quiropraxia.</p>
       <div class="footer-links"><a href="#producto">Producto</a><a href="#funciones">Funciones</a><a href="#precios">Precios</a><a href="https://app.quironexus.com/">Ingresar</a><a href="mailto:quironexus@gmail.com">Contacto</a></div>
-      <div class="copyright">© 2026 QuiroNexus · Gestión para consultorios de quiropraxia · Argentina.</div>
+      <div class="copyright">© 2026 QuiroNexus · Argentina.</div>
     </div>
   </footer>
 

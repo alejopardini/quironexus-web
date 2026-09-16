@@ -88,21 +88,25 @@ button,input,select,textarea{font:inherit}
 @media(max-width:1050px){.capability-grid{grid-template-columns:1fr 1fr}.capability-large{grid-column:span 2;grid-row:auto}.zoe-inner{grid-template-columns:58px 1fr}.zoe-badge{grid-column:2}}
 @media(max-width:700px){.capability-grid{grid-template-columns:1fr}.capability-large{grid-column:auto;grid-template-columns:1fr}.capability-card{min-height:auto}.image-study-mock{min-height:260px}.zoe-inner{grid-template-columns:48px 1fr;gap:14px}.zoe-avatar{width:48px;height:48px;border-radius:14px;font-size:1.2rem}.zoe-badge{grid-column:2;justify-self:start}}
 
-/* ---------- V3: public access + pricing ---------- */
-.nav-login{color:var(--blue)!important;font-weight:700!important;margin-left:2px}.nav-login:hover{color:var(--navy)!important}
-.pricing{background:var(--soft)}
-.pricing .section-heading{max-width:850px;margin-left:auto;margin-right:auto;margin-bottom:48px}
-.pricing-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;align-items:stretch}
-.price-card{position:relative;background:#fff;border:1px solid var(--line);border-radius:20px;padding:27px 23px 23px;display:flex;flex-direction:column;min-height:430px;box-shadow:0 12px 35px rgba(16,43,78,.045);transition:transform .2s,box-shadow .2s,border-color .2s}
-.price-card:hover{transform:translateY(-4px);box-shadow:0 18px 45px rgba(16,43,78,.09);border-color:#cbdce5}
-.price-featured{border:1.5px solid rgba(88,200,197,.65);box-shadow:0 18px 50px rgba(16,43,78,.09);padding-top:35px}
-.price-ribbon{position:absolute;right:18px;top:17px;font-size:.54rem;letter-spacing:.09em;font-weight:800;color:#398e8b;background:var(--cyan-soft);padding:5px 7px;border-radius:999px}
-.price-top{display:flex;flex-direction:column;gap:7px;padding-right:5px}.price-name{font-family:var(--font-display);font-size:1.15rem;font-weight:800;color:var(--navy)}.price-fit{font-size:.66rem;color:#7c8c9d}
-.price-value{display:flex;align-items:baseline;gap:6px;margin:23px 0 9px}.price-value strong{font-family:var(--font-display);font-size:clamp(1.75rem,2.4vw,2.15rem);letter-spacing:-.05em;color:var(--navy)}.price-value span{font-size:.68rem;color:#8391a0}
-.price-description{font-size:.74rem!important;line-height:1.55!important;min-height:49px}
-.price-features{list-style:none;padding:17px 0 0;margin:17px 0 22px;border-top:1px solid var(--line);display:grid;gap:10px}.price-features li{font-size:.68rem;color:#607287;display:flex;gap:8px;align-items:flex-start}.price-features i{color:var(--cyan);font-size:.78rem;margin-top:1px}
-.btn-price{margin-top:auto;width:100%;justify-content:center;background:#fff;color:var(--navy);border:1px solid #cfdde5;box-shadow:none}.btn-price:hover{background:#f3f8fa;color:var(--navy);border-color:#aec6d1;transform:translateY(-1px)}.btn-price-primary{background:var(--navy);border-color:var(--navy);color:#fff}.btn-price-primary:hover{background:var(--navy-2);border-color:var(--navy-2);color:#fff}
-.pricing-note{text-align:center;font-size:.65rem;color:#8997a5;margin:23px 0 0}.pricing-note i{color:#5a8a9e;margin-right:4px}
-@media(max-width:1050px){.pricing-grid{grid-template-columns:1fr 1fr}.price-card{min-height:400px}}
-@media(max-width:800px){.nav-login{margin-left:0}.pricing-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:560px){.pricing-grid{grid-template-columns:1fr}.price-card,.price-featured{min-height:auto}.price-description{min-height:0}.price-features{margin-bottom:20px}}
+/* ---------- V3: official logo + public pricing ---------- */
+.brand-logo{width:36px;height:36px;display:block;object-fit:contain;flex:0 0 36px}
+.nav-login{color:var(--navy)!important;font-weight:700}
+.nav-login:hover{color:var(--blue)!important}
+.pricing{background:#fff}
+.pricing-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:42px}
+.pricing-card{background:#f8fafb;border:1px solid var(--line);border-radius:20px;padding:28px 24px;display:flex;flex-direction:column;min-height:430px;position:relative;transition:transform .2s,box-shadow .2s,border-color .2s}
+.pricing-card:hover{transform:translateY(-4px);box-shadow:0 18px 45px rgba(16,43,78,.08);border-color:#cbdbe4}
+.pricing-card.pricing-featured{background:linear-gradient(145deg,#f2faf9,#f8fbfc);border-color:#9bd6d3;box-shadow:0 14px 40px rgba(16,43,78,.08)}
+.pricing-label{font-size:.62rem;font-weight:800;letter-spacing:.1em;color:#398e8b;margin-bottom:14px}
+.pricing-card h3{font-family:var(--font-display);font-size:1.35rem;color:var(--navy);margin:0 0 9px;letter-spacing:-.035em}
+.pricing-description{font-size:.76rem;line-height:1.55;color:var(--muted);min-height:58px;margin:0}
+.pricing-price{display:flex;align-items:baseline;gap:6px;margin:25px 0 20px;padding-top:18px;border-top:1px solid var(--line)}
+.pricing-price strong{font-family:var(--font-display);font-size:1.8rem;letter-spacing:-.045em;color:var(--navy)}
+.pricing-price span{font-size:.68rem;color:#8291a0}
+.pricing-card ul{list-style:none;padding:0;margin:0 0 25px;display:grid;gap:10px}
+.pricing-card li{font-size:.72rem;color:#607287;display:flex;align-items:center;gap:8px}
+.pricing-card li i{color:var(--cyan);font-size:.9rem}
+.pricing-btn{width:100%;margin-top:auto;justify-content:center}
+@media(max-width:1050px){.pricing-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:800px){.nav-login{text-align:center}.pricing-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.pricing-grid{grid-template-columns:1fr}.pricing-card{min-height:auto}.pricing-description{min-height:0}}
