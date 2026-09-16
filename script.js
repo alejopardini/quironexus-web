@@ -30,50 +30,9 @@
     scrollTop.addEventListener('click', ()=>window.scrollTo({top:0,behavior:'smooth'}));
   }
 
-  const vertebrae = [
-    ['C1','Cervical','PR','Gonstead'],['C2','Cervical','PRS','Diversified'],['C3','Cervical','PI','Gonstead'],['C4','Cervical','PR','Thompson'],
-    ['C5','Cervical','PR','Gonstead'],['C6','Cervical','PI','Diversified'],['C7','Cervical','PRS','Gonstead'],
-    ['T1','Torácica','PR','Gonstead'],['T2','Torácica','ACT','Thompson'],['T3','Torácica','ACT','Gonstead'],['T4','Torácica','PI','Diversified'],['T5','Torácica','PR','Gonstead'],['T6','Torácica','PI','Thompson'],
-    ['T7','Torácica','PR','Gonstead'],['T8','Torácica','PRS','Diversified'],['T9','Torácica','PR','Gonstead'],['T10','Torácica','PI','Thompson'],['T11','Torácica','PR','Gonstead'],['T12','Torácica','PRS','Diversified'],
-    ['L1','Lumbar','PL','Gonstead'],['L2','Lumbar','PR','Diversified'],['L3','Lumbar','PI','Gonstead'],['L4','Lumbar','PL','Thompson'],['L5','Lumbar','PR','Gonstead']
-  ];
-
-  const y = [7.2,11.1,14.7,18.4,22.1,25.9,29.6,33.4,37.4,41.1,45.0,48.8,52.6,56.3,60.0,63.8,67.6,71.2,74.9,78.5,82.3,86.1,89.8,93.5];
-  const hotspotLayer = document.getElementById('spineHotspots');
-  const segmentName = document.getElementById('segmentName');
-  const segmentListing = document.getElementById('segmentListing');
-  const segmentTechnique = document.getElementById('segmentTechnique');
-  const segmentDate = document.getElementById('segmentDate');
-  const segmentNote = document.getElementById('segmentNote');
-  let current = 4;
-
-  function selectSegment(index){
-    current = (index + vertebrae.length) % vertebrae.length;
-    const [name, region, listing, technique] = vertebrae[current];
-    if(segmentName) segmentName.textContent = name;
-    if(segmentListing) segmentListing.textContent = listing;
-    if(segmentTechnique) segmentTechnique.textContent = technique;
-    if(segmentDate) segmentDate.textContent = current === 4 ? 'Hoy · 10:42' : 'Último registro · reciente';
-    if(segmentNote) segmentNote.textContent = `${region} · Registro de ajuste asociado al segmento ${name}. Evolución documentada en la ficha.`;
-    document.querySelectorAll('.spine-hotspot').forEach((el,i)=>el.classList.toggle('active',i===current));
-  }
-
-  if(hotspotLayer){
-    vertebrae.forEach((v,index)=>{
-      const button = document.createElement('button');
-      button.type='button';
-      button.className='spine-hotspot';
-      button.style.top = `${y[index]}%`;
-      button.setAttribute('aria-label', `Seleccionar ${v[0]}`);
-      button.title = v[0];
-      button.addEventListener('click',()=>selectSegment(index));
-      hotspotLayer.appendChild(button);
-    });
-    selectSegment(current);
-  }
-
-  const nextSegment = document.getElementById('nextSegment');
-  if(nextSegment) nextSegment.addEventListener('click',()=>selectSegment(current+1));
+  // The spine image in the landing is intentionally demonstrative, not clickable.
+  // The real product lets the professional click individual vertebrae inside the app.
+  // We keep one representative adjustment fixed here: C5 + Thompson.
 
   const form = document.getElementById('contactForm');
   const note = document.getElementById('formNote');
@@ -91,7 +50,7 @@
         return;
       }
       const clinicLabel = clinic === 'equipo' ? 'Equipo de varios profesionales' : 'Profesional individual';
-      const subject = encodeURIComponent(`Acceso beta QuiroNexus — ${name}`);
+      const subject = encodeURIComponent(`Consulta sobre QuiroNexus — ${name}`);
       const body = encodeURIComponent(
         `Nombre: ${name}\nEmail: ${email}\nTipo de consultorio: ${clinicLabel}\nCiudad: ${city || '(sin completar)'}\n\nMensaje:\n${message || '(sin mensaje adicional)'}`
       );

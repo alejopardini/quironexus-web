@@ -2,6 +2,7 @@
 <html lang="es-AR">
 <head>
   <meta charset="utf-8">
+  <link rel="icon" type="image/png" href="favicon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>QuiroNexus — Gestión para consultorios de quiropraxia</title>
   <meta name="description" content="QuiroNexus reúne agenda, pacientes e historia clínica en una herramienta pensada para consultorios de quiropraxia.">
@@ -22,8 +23,10 @@
       <nav class="nav" id="navmenu" aria-label="Navegación principal">
         <a href="#producto">Producto</a>
         <a href="#funciones">Funciones</a>
+        <a href="#precios">Precios</a>
         <a href="#como-funciona">Cómo funciona</a>
-        <a href="#contact" class="nav-cta">Probar beta</a>
+        <a href="https://app.quironexus.com/" class="nav-login">Ingresar</a>
+        <a href="#precios" class="nav-cta">Comenzar</a>
       </nav>
 
       <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir menú" aria-expanded="false">
@@ -41,13 +44,13 @@
           <h1>La historia de cada ajuste, <em>en una sola ficha.</em></h1>
           <p class="hero-lead">Agenda, pacientes e historia clínica unidos en una herramienta pensada alrededor de cómo trabaja un quiropráctico.</p>
           <div class="hero-actions">
-            <a href="#contact" class="btn btn-primary">Quiero probar QuiroNexus <i class="bi bi-arrow-right"></i></a>
+            <a href="#precios" class="btn btn-primary">Comenzar con QuiroNexus <i class="bi bi-arrow-right"></i></a>
             <a href="#producto" class="btn btn-ghost">Ver cómo funciona</a>
           </div>
           <div class="hero-trust">
-            <span><i class="bi bi-check2"></i> En etapa beta</span>
             <span><i class="bi bi-check2"></i> Sin instalación</span>
             <span><i class="bi bi-check2"></i> Pensado para consultorios</span>
+            <span><i class="bi bi-check2"></i> Agenda + ficha clínica</span>
           </div>
         </div>
 
@@ -73,16 +76,16 @@
                 <div class="spine-panel">
                   <div class="panel-heading">
                     <div>
-                      <span class="mini-label">MAPA CLÍNICO</span>
+                      <span class="mini-label">FICHA CLÍNICA</span>
                       <h3>Ajustes vertebrales</h3>
                     </div>
                     <span class="save-state"><i class="bi bi-check-circle-fill"></i> Guardado</span>
                   </div>
-                  <p class="panel-help">Seleccioná una vértebra para consultar su registro.</p>
+                  <p class="panel-help">Registro de ajustes vertebrales del paciente.</p>
 
                   <div class="spine-stage" id="spineStage">
                     <img src="columna-spine.png" alt="Columna vertebral interactiva de QuiroNexus" class="spine-image">
-                    <div class="spine-hotspots" id="spineHotspots" aria-label="Vértebras seleccionables"></div>
+                    
                   </div>
                 </div>
 
@@ -98,7 +101,7 @@
                   </div>
                   <div class="data-group">
                     <span>Técnica</span>
-                    <strong id="segmentTechnique">Gonstead</strong>
+                    <strong id="segmentTechnique">Thompson</strong>
                   </div>
                   <div class="data-group">
                     <span>Último registro</span>
@@ -106,9 +109,8 @@
                   </div>
                   <div class="note-box">
                     <span>Nota clínica</span>
-                    <p id="segmentNote">Ajuste registrado durante la sesión. Evolución favorable.</p>
+                    <p id="segmentNote">Ajuste cervical registrado durante la sesión. Evolución documentada en la ficha.</p>
                   </div>
-                  <button class="panel-link" type="button" id="nextSegment">Explorar otro segmento <i class="bi bi-arrow-right"></i></button>
                 </aside>
               </div>
             </div>
@@ -178,6 +180,69 @@
       </div>
     </section>
 
+    <section class="capabilities section" id="capacidades">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="section-kicker">MÁS QUE UNA AGENDA</span>
+            <h2>Herramientas que <span>hacen más simple el día a día.</span></h2>
+          </div>
+          <p>Funciones pensadas para reducir tareas administrativas y mejorar el seguimiento del paciente.</p>
+        </div>
+
+        <div class="capability-grid">
+          <article class="capability-card capability-large">
+            <div class="capability-copy">
+              <span class="capability-icon"><i class="bi bi-images"></i></span>
+              <h3>Estudios e imágenes, dentro de la ficha</h3>
+              <p>Cargá y editá imágenes del paciente, como estudios. Podés hacer anotaciones, trazar líneas y trabajar sobre la imagen sin salir de la ficha.</p>
+              <ul>
+                <li><i class="bi bi-check2"></i> Carga y edición de imágenes</li>
+                <li><i class="bi bi-check2"></i> Anotaciones y trazados</li>
+                <li><i class="bi bi-check2"></i> Todo asociado al paciente</li>
+              </ul>
+            </div>
+            <div class="image-study-mock">
+              <div class="study-toolbar"><span>Estudio · Columna</span><span><i class="bi bi-pencil"></i> Anotar</span></div>
+              <div class="study-canvas"><div class="study-line"></div><span class="study-mark">C5</span></div>
+            </div>
+          </article>
+
+          <article class="capability-card">
+            <span class="capability-icon"><i class="bi bi-bell"></i></span>
+            <h3>Recordatorios automáticos</h3>
+            <p>Ayudá a que el paciente recuerde su turno sin que la secretaria tenga que hacerlo manualmente.</p>
+            <div class="reminder-list">
+              <div><i class="bi bi-envelope"></i><span><b>Email</b><small>1 día antes</small></span><em>Automático</em></div>
+              <div><i class="bi bi-whatsapp"></i><span><b>WhatsApp</b><small>Horas antes · configurable</small></span><em>Automático</em></div>
+            </div>
+          </article>
+
+          <article class="capability-card capability-booking">
+            <span class="capability-icon"><i class="bi bi-calendar2-plus"></i></span>
+            <h3>Autogestión de turnos</h3>
+            <p>Compartís un link por WhatsApp o desde tu web. El paciente elige un horario disponible y puede confirmar su turno con una seña.</p>
+            <div class="booking-flow">
+              <span>Link del consultorio</span><i class="bi bi-arrow-right"></i><span>Horario</span><i class="bi bi-arrow-right"></i><span>Seña</span>
+            </div>
+            <div class="booking-note"><i class="bi bi-check-circle-fill"></i> Menos mensajes · menos ausencias · más facilidad para reservar</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="zoe-strip section-light">
+      <div class="container zoe-inner">
+        <div class="zoe-avatar">Z</div>
+        <div class="zoe-copy">
+          <span class="section-kicker">VISIÓN DE FUTURO</span>
+          <h2>Zoe, la asistente de QuiroNexus.</h2>
+          <p>Una asistente virtual pensada para responder consultas frecuentes, ayudar a los pacientes y gestionar turnos automáticamente. <strong>En desarrollo.</strong></p>
+        </div>
+        <span class="zoe-badge"><i class="bi bi-stars"></i> Próximamente</span>
+      </div>
+    </section>
+
     <section class="workflow section" id="como-funciona">
       <div class="container">
         <div class="section-heading centered">
@@ -218,25 +283,88 @@
       </div>
     </section>
 
-    <section class="beta-banner">
-      <div class="container beta-inner">
-        <div>
-          <span class="section-kicker">ETAPA BETA</span>
-          <h2>Estamos construyendo QuiroNexus con quienes lo van a usar.</h2>
-          <p>Queremos conocer cómo funciona tu consultorio y qué necesitás realmente.</p>
+    <section class="pricing section-light" id="precios">
+      <div class="container">
+        <div class="section-heading centered">
+          <span class="section-kicker">PRECIOS</span>
+          <h2>Elegí el plan que <span>mejor encaja con tu consultorio.</span></h2>
+          <p>Empezá con la estructura que necesitás hoy y elegí el nivel de equipo que acompaña tu crecimiento.</p>
         </div>
-        <a href="#contact" class="btn btn-light">Quiero participar <i class="bi bi-arrow-right"></i></a>
+
+        <div class="pricing-grid">
+          <article class="price-card">
+            <div class="price-top">
+              <span class="price-name">Independiente</span>
+              <span class="price-fit">1 profesional</span>
+            </div>
+            <div class="price-value"><strong>$20.000</strong><span>/ mes</span></div>
+            <p class="price-description">Para profesionales que trabajan de forma independiente.</p>
+            <ul class="price-features">
+              <li><i class="bi bi-check2"></i> 1 profesional</li>
+              <li><i class="bi bi-check2"></i> 1 sede</li>
+              <li><i class="bi bi-check2"></i> Agenda y ficha clínica</li>
+            </ul>
+            <a class="btn btn-price" href="https://app.quironexus.com/registro?plan=independiente">Elegir plan <i class="bi bi-arrow-right"></i></a>
+          </article>
+
+          <article class="price-card price-featured">
+            <div class="price-ribbon">CONSULTORIO</div>
+            <div class="price-top">
+              <span class="price-name">Consultorio</span>
+              <span class="price-fit">Hasta 3 profesionales</span>
+            </div>
+            <div class="price-value"><strong>$30.000</strong><span>/ mes</span></div>
+            <p class="price-description">Para equipos chicos que comparten pacientes y organización.</p>
+            <ul class="price-features">
+              <li><i class="bi bi-check2"></i> Hasta 3 profesionales</li>
+              <li><i class="bi bi-check2"></i> Hasta 2 sedes</li>
+              <li><i class="bi bi-check2"></i> Gestión de equipo</li>
+            </ul>
+            <a class="btn btn-price btn-price-primary" href="https://app.quironexus.com/registro?plan=consultorio">Elegir plan <i class="bi bi-arrow-right"></i></a>
+          </article>
+
+          <article class="price-card">
+            <div class="price-top">
+              <span class="price-name">Clínica</span>
+              <span class="price-fit">Hasta 5 profesionales</span>
+            </div>
+            <div class="price-value"><strong>$40.000</strong><span>/ mes</span></div>
+            <p class="price-description">Para clínicas que necesitan una estructura de trabajo más amplia.</p>
+            <ul class="price-features">
+              <li><i class="bi bi-check2"></i> Hasta 5 profesionales</li>
+              <li><i class="bi bi-check2"></i> Hasta 2 sedes</li>
+              <li><i class="bi bi-check2"></i> Organización por profesionales</li>
+            </ul>
+            <a class="btn btn-price" href="https://app.quironexus.com/registro?plan=clinica">Elegir plan <i class="bi bi-arrow-right"></i></a>
+          </article>
+
+          <article class="price-card">
+            <div class="price-top">
+              <span class="price-name">Clínica Plus</span>
+              <span class="price-fit">Hasta 10 profesionales</span>
+            </div>
+            <div class="price-value"><strong>$75.000</strong><span>/ mes</span></div>
+            <p class="price-description">Para equipos más grandes y una operación con varias sedes.</p>
+            <ul class="price-features">
+              <li><i class="bi bi-check2"></i> Hasta 10 profesionales</li>
+              <li><i class="bi bi-check2"></i> Hasta 3 sedes</li>
+              <li><i class="bi bi-check2"></i> Gestión de estructura ampliada</li>
+            </ul>
+            <a class="btn btn-price" href="https://app.quironexus.com/registro?plan=clinica-plus">Elegir plan <i class="bi bi-arrow-right"></i></a>
+          </article>
+        </div>
+        <p class="pricing-note"><i class="bi bi-lock"></i> La contratación y gestión de tu cuenta se realizan desde QuiroNexus.</p>
       </div>
     </section>
 
     <section class="contact section-light" id="contact">
       <div class="container contact-grid">
         <div class="contact-copy">
-          <span class="section-kicker">ACCESO ANTICIPADO</span>
-          <h2>¿Querés probar<br><span>QuiroNexus?</span></h2>
-          <p>Dejanos tus datos. Te contactamos para conocer tu consultorio y coordinar el acceso a la beta.</p>
-          <div class="contact-detail"><i class="bi bi-envelope"></i><span>info@quironexus.com</span></div>
-          <div class="contact-detail"><i class="bi bi-geo-alt"></i><span>Buenos Aires - Argentina</span></div>
+          <span class="section-kicker">¿TENÉS DUDAS?</span>
+          <h2>Hablemos de<br><span>tu consultorio.</span></h2>
+          <p>Si querés conocer mejor QuiroNexus antes de comenzar, escribinos y contanos cómo trabajás hoy.</p>
+          <div class="contact-detail"><i class="bi bi-envelope"></i><span>hola@quironexus.com</span></div>
+          <div class="contact-detail"><i class="bi bi-geo-alt"></i><span>Argentina</span></div>
         </div>
 
         <form class="contact-form" id="contactForm" novalidate>
@@ -254,7 +382,7 @@
             <label>Ciudad<input type="text" name="city" autocomplete="address-level2"></label>
           </div>
           <label>Contanos cómo trabajás hoy <span>(opcional)</span><textarea name="message" rows="4"></textarea></label>
-          <button class="btn btn-primary btn-submit" type="submit">Enviar solicitud <i class="bi bi-arrow-right"></i></button>
+          <button class="btn btn-primary btn-submit" type="submit">Contactar a QuiroNexus <i class="bi bi-arrow-right"></i></button>
           <p class="form-note" id="formNote" role="status"></p>
         </form>
       </div>
@@ -265,8 +393,8 @@
     <div class="container footer-inner">
       <a class="brand" href="#hero"><span class="brand-mark"><span></span></span><span>Quiro<span>Nexus</span></span></a>
       <p>Gestión para consultorios de quiropraxia.</p>
-      <div class="footer-links"><a href="#producto">Producto</a><a href="#funciones">Funciones</a><a href="#contact">Beta</a><a href="mailto:hola@quironexus.com">Contacto</a></div>
-      <div class="copyright">© 2026 QuiroNexus · Producto en beta · Argentina.</div>
+      <div class="footer-links"><a href="#producto">Producto</a><a href="#funciones">Funciones</a><a href="#precios">Precios</a><a href="https://app.quironexus.com/">Ingresar</a><a href="mailto:hola@quironexus.com">Contacto</a></div>
+      <div class="copyright">© 2026 QuiroNexus · Gestión para consultorios de quiropraxia · Argentina.</div>
     </div>
   </footer>
 
