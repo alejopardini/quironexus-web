@@ -22,13 +22,12 @@
       </a>
 
       <nav class="nav" id="navmenu" aria-label="Navegación principal">
-        <a href="#producto">Producto</a>
         <a href="#funciones">Funciones</a>
-        <a href="#capacidades">Más herramientas</a>
-        <a href="#precios">Precios</a>
         <a href="#como-funciona">Cómo funciona</a>
-        <a href="https://app.quironexus.com/" class="nav-login">Ingresar</a>
-        <a href="#precios" class="nav-cta">Comenzar</a>
+        <a href="#precios">Precios</a>
+        <a href="#contact">Consultas</a>
+        <a href="https://app.quironexus.com/" class="nav-login btn btn-ghost btn-small">Iniciar sesión</a>
+        <a href="#precios" class="nav-cta btn btn-primary btn-small">Comenzar</a>
       </nav>
 
       <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir menú" aria-expanded="false">
@@ -42,12 +41,12 @@
       <div class="hero-grid-glow"></div>
       <div class="container hero-inner">
         <div class="hero-copy">
-          <div class="eyebrow"><span></span> Software diseñado para quiropraxia</div>
-          <h1>La historia de cada ajuste, <em>en una sola ficha.</em></h1>
-          <p class="hero-lead">Agenda, pacientes e historia clínica unidos en una herramienta pensada alrededor de cómo trabaja un quiropráctico.</p>
+          <div class="eyebrow"><span></span> Software diseñado para quiroprácticos</div>
+          <h1>De cada turno a cada ajuste, <em>todo conectado.</em></h1>
+          <p class="hero-lead">Gestioná turnos, pacientes y cada ajuste desde una plataforma diseñada específicamente para la práctica quiropráctica.</p>
           <div class="hero-actions">
             <a href="#precios" class="btn btn-primary">Comenzar con QuiroNexus <i class="bi bi-arrow-right"></i></a>
-            <a href="#producto" class="btn btn-ghost">Ver cómo funciona</a>
+            <a href="#como-funciona" class="btn btn-ghost">Ver cómo funciona</a>
           </div>
           <div class="hero-trust">
             <span><i class="bi bi-check2"></i> Sin instalación</span>
@@ -124,120 +123,124 @@
       <div class="hero-bottom-line"></div>
     </section>
 
-    <section class="statement section" id="producto">
-      <div class="container statement-grid">
-        <div class="section-kicker">HECHO PARA EL CONSULTORIO</div>
-        <div>
-          <h2>No adaptamos un software genérico a la quiropraxia. <span>Diseñamos alrededor de ella.</span></h2>
-          <p>La agenda, la ficha del paciente y el seguimiento clínico tienen que hablar el mismo idioma. QuiroNexus nace desde esa lógica.</p>
+    <section class="funciones section-light" id="funciones">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="section-kicker">TODO TU CONSULTORIO, CONECTADO</span>
+            <h2><span>Todo lo que tu práctica necesita</span><br>en un solo lugar.</h2>
+          </div>
+          <p>QuiroNexus reúne agenda, pacientes, consultas y ajustes para que toda la información de tu práctica esté conectada y siempre disponible.</p>
+        </div>
+
+        <div class="funciones-carousel">
+          <div class="funciones-row" id="funcionesRow">
+            <article class="funcion-card">
+              <div class="funcion-card-content">
+                <h3>Historia clínica que entiende la columna</h3>
+                <p>Registrá ajustes, técnicas y notas por segmento para seguir la evolución del paciente consulta a consulta.</p>
+              </div>
+              <div class="funcion-card-visual vertebral-mini">
+                <span class="mini-vertebra active">C5</span><span class="mini-vertebra">T3</span><span class="mini-vertebra active">T7</span><span class="mini-vertebra">L4</span>
+              </div>
+            </article>
+
+            <article class="funcion-card">
+              <div class="funcion-card-content">
+                <h3>Agenda sin fricción</h3>
+                <p>Turnos, disponibilidad y organización del consultorio desde una agenda clara y rápida de usar.</p>
+              </div>
+              <div class="funcion-card-visual agenda-mini">
+                <div><span>09:00</span><b>J. Pérez</b></div>
+                <div><span>09:30</span><b>M. Ruiz</b></div>
+                <div class="selected"><span>10:00</span><b>L. Sosa</b></div>
+                <div><span>10:30</span><b>Disponible</b></div>
+              </div>
+            </article>
+
+            <article class="funcion-card">
+              <div class="funcion-card-content">
+                <h3>Tu consultorio, organizado</h3>
+                <p>Gestioná pacientes, profesionales y permisos desde un mismo espacio, tanto si trabajás solo como en equipo.</p>
+              </div>
+              <div class="funcion-card-visual team-mini">
+                <div class="team-row"><span class="avatar">MP</span><div><b>Dra. Molina</b><small>Acceso total</small></div><i class="bi bi-check-circle-fill"></i></div>
+                <div class="team-row"><span class="avatar">JR</span><div><b>Lic. Ramírez</b><small>Agenda y pacientes</small></div><i class="bi bi-check-circle-fill"></i></div>
+              </div>
+            </article>
+
+            <article class="funcion-card">
+              <div class="funcion-card-content">
+                <h3>Estudios e imágenes, dentro de la ficha</h3>
+                <p>Cargá y editá imágenes del paciente. Anotá, trazá líneas y trabajá sobre la imagen sin salir de la ficha.</p>
+              </div>
+              <div class="funcion-card-visual image-study-mock">
+                <div class="study-toolbar"><span>Estudio · Columna</span><span><i class="bi bi-pencil"></i> Anotar</span></div>
+                <div class="study-canvas"><div class="study-line"></div><span class="study-mark">C5</span></div>
+              </div>
+            </article>
+
+            <article class="funcion-card">
+              <div class="funcion-card-content">
+                <h3>Recordatorios automáticos</h3>
+                <p>Ayudá a que el paciente recuerde su turno sin que la secretaria tenga que hacerlo manualmente.</p>
+              </div>
+              <div class="funcion-card-visual reminder-list">
+                <div><i class="bi bi-envelope"></i><span><b>Email</b><small>1 día antes</small></span><em>Automático</em></div>
+                <div><i class="bi bi-whatsapp"></i><span><b>WhatsApp</b><small>Horas antes · configurable</small></span><em>Automático</em></div>
+              </div>
+            </article>
+
+            <article class="funcion-card">
+              <div class="funcion-card-content">
+                <h3>Autogestión de turnos</h3>
+                <p>Compartís un link por WhatsApp o desde tu web. El paciente elige un horario y confirma su turno con una seña.</p>
+              </div>
+              <div class="funcion-card-visual booking-mini">
+                <span>Link del consultorio</span><i class="bi bi-arrow-right"></i><span>Horario</span><i class="bi bi-arrow-right"></i><span>Seña</span>
+              </div>
+            </article>
+          </div>
+
+          <div class="carousel-arrows">
+            <button class="arrow-btn arrow-left" id="carouselPrev" aria-label="Función anterior"><i class="bi bi-arrow-left"></i></button>
+            <button class="arrow-btn arrow-right" id="carouselNext" aria-label="Función siguiente"><i class="bi bi-arrow-right"></i></button>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="pillars section-light" id="funciones">
+    <section class="how-it-works section" id="como-funciona">
       <div class="container">
-        <div class="section-heading">
-          <div>
-            <span class="section-kicker">TRES PILARES</span>
-            <h2>Menos administración.<br><span>Más tiempo en la camilla.</span></h2>
+        <div class="section-heading left-stack">
+          <span class="section-kicker">CÓMO FUNCIONA</span>
+          <h2>Mirá QuiroNexus en acción<br><span>paso a paso.</span></h2>
+          <p>Recorré las tareas principales de QuiroNexus con tutoriales cortos diseñados para mostrarte cada función en pocos segundos.</p>
+        </div>
+
+        <div class="tutorial-module">
+          <div class="tutorial-nav" id="tutorialNav" role="tablist" aria-label="Tutoriales de QuiroNexus">
+            <button class="tutorial-item active" role="tab" aria-selected="true" data-tutorial="turno">Nuevo turno</button>
+            <button class="tutorial-item" role="tab" aria-selected="false" data-tutorial="paciente">Nuevo paciente</button>
+            <button class="tutorial-item" role="tab" aria-selected="false" data-tutorial="consulta">Nueva consulta</button>
+            <button class="tutorial-item" role="tab" aria-selected="false" data-tutorial="ajuste">Registrar ajuste</button>
           </div>
-          <p>Todo lo esencial del consultorio, conectado en un mismo lugar.</p>
-        </div>
-
-        <div class="pillar-grid">
-          <article class="pillar-card pillar-main">
-            <div class="pillar-number">01</div>
-            <div class="pillar-icon"><i class="bi bi-bounding-box-circles"></i></div>
-            <h3>Historia clínica que entiende la columna</h3>
-            <p>Registrá ajustes, listados, técnicas y notas por segmento. La evolución del paciente deja de depender de una hoja suelta o de la memoria.</p>
-            <div class="pillar-visual vertebral-mini">
-              <span class="mini-vertebra active">C5</span><span class="mini-vertebra">T3</span><span class="mini-vertebra active">T7</span><span class="mini-vertebra">L4</span>
+          <div class="tutorial-content">
+            <div class="video-frame" id="videoFrame">
+              <i class="bi bi-play-circle"></i>
+              <span id="videoFrameLabel">Video: Nuevo turno</span>
+              <small>Tutoriales en video, disponibles cuando la app esté lista.</small>
             </div>
-          </article>
-
-          <article class="pillar-card">
-            <div class="pillar-number">02</div>
-            <div class="pillar-icon"><i class="bi bi-calendar3"></i></div>
-            <h3>Agenda sin fricción</h3>
-            <p>Turnos, disponibilidad y organización del consultorio desde una agenda clara y rápida de usar.</p>
-            <div class="pillar-visual agenda-mini">
-              <div><span>09:00</span><b>J. Pérez</b></div>
-              <div><span>09:30</span><b>M. Ruiz</b></div>
-              <div class="selected"><span>10:00</span><b>L. Sosa</b></div>
-              <div><span>10:30</span><b>Disponible</b></div>
-            </div>
-          </article>
-
-          <article class="pillar-card">
-            <div class="pillar-number">03</div>
-            <div class="pillar-icon"><i class="bi bi-people"></i></div>
-            <h3>Un consultorio, un sistema</h3>
-            <p>Pacientes, profesionales y permisos organizados para trabajar solo o en equipo.</p>
-            <div class="pillar-visual team-mini">
-              <div class="team-row"><span class="avatar">MP</span><div><b>Dra. Molina</b><small>Acceso total</small></div><i class="bi bi-check-circle-fill"></i></div>
-              <div class="team-row"><span class="avatar">JR</span><div><b>Lic. Ramírez</b><small>Agenda y pacientes</small></div><i class="bi bi-check-circle-fill"></i></div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="capabilities section" id="capacidades">
-      <div class="container">
-        <div class="section-heading">
-          <div>
-            <span class="section-kicker">MÁS QUE UNA AGENDA</span>
-            <h2>Herramientas que <span>hacen más simple el día a día.</span></h2>
           </div>
-          <p>Funciones pensadas para reducir tareas administrativas y mejorar el seguimiento del paciente.</p>
-        </div>
-
-        <div class="capability-grid">
-          <article class="capability-card capability-large">
-            <div class="capability-copy">
-              <span class="capability-icon"><i class="bi bi-images"></i></span>
-              <h3>Estudios e imágenes, dentro de la ficha</h3>
-              <p>Cargá y editá imágenes del paciente, como estudios. Podés hacer anotaciones, trazar líneas y trabajar sobre la imagen sin salir de la ficha.</p>
-              <ul>
-                <li><i class="bi bi-check2"></i> Carga y edición de imágenes</li>
-                <li><i class="bi bi-check2"></i> Anotaciones y trazados</li>
-                <li><i class="bi bi-check2"></i> Todo asociado al paciente</li>
-              </ul>
-            </div>
-            <div class="image-study-mock">
-              <div class="study-toolbar"><span>Estudio · Columna</span><span><i class="bi bi-pencil"></i> Anotar</span></div>
-              <div class="study-canvas"><div class="study-line"></div><span class="study-mark">C5</span></div>
-            </div>
-          </article>
-
-          <article class="capability-card">
-            <span class="capability-icon"><i class="bi bi-bell"></i></span>
-            <h3>Recordatorios automáticos</h3>
-            <p>Ayudá a que el paciente recuerde su turno sin que la secretaria tenga que hacerlo manualmente.</p>
-            <div class="reminder-list">
-              <div><i class="bi bi-envelope"></i><span><b>Email</b><small>1 día antes</small></span><em>Automático</em></div>
-              <div><i class="bi bi-whatsapp"></i><span><b>WhatsApp</b><small>Horas antes · configurable</small></span><em>Automático</em></div>
-            </div>
-          </article>
-
-          <article class="capability-card capability-booking">
-            <span class="capability-icon"><i class="bi bi-calendar2-plus"></i></span>
-            <h3>Autogestión de turnos</h3>
-            <p>Compartís un link por WhatsApp o desde tu web. El paciente elige un horario disponible y puede confirmar su turno con una seña.</p>
-            <div class="booking-flow">
-              <span>Link del consultorio</span><i class="bi bi-arrow-right"></i><span>Horario</span><i class="bi bi-arrow-right"></i><span>Seña</span>
-            </div>
-            <div class="booking-note"><i class="bi bi-check-circle-fill"></i> Menos mensajes · menos ausencias · más facilidad para reservar</div>
-          </article>
         </div>
       </div>
     </section>
 
     <section class="pricing section-light" id="precios">
       <div class="container">
-        <div class="section-heading centered">
+        <div class="section-heading left-stack">
           <span class="section-kicker">PRECIOS</span>
-          <h2>Elegí el plan que <span>acompaña a tu consultorio.</span></h2>
+          <h2><span>Elegí el plan que acompaña</span> a tu consultorio.</h2>
           <p>Empezá con la estructura que necesitás hoy y elegí el nivel de organización que mejor se adapte a tu equipo.</p>
         </div>
 
@@ -309,60 +312,20 @@
       </div>
     </section>
 
-    <section class="workflow section" id="como-funciona">
-      <div class="container">
-        <div class="section-heading centered">
-          <span class="section-kicker">ASÍ SE USA</span>
-          <h2>De la agenda al ajuste.<br><span>Sin cambiar de lugar.</span></h2>
-          <p>La información acompaña al paciente durante todo el recorrido.</p>
-        </div>
-
-        <div class="workflow-line">
-          <div class="workflow-step">
-            <span class="step-index">01</span>
-            <div class="step-icon"><i class="bi bi-calendar-check"></i></div>
-            <h3>Agendás</h3>
-            <p>Ves disponibilidad y asignás el turno.</p>
-          </div>
-          <div class="workflow-connector"></div>
-          <div class="workflow-step">
-            <span class="step-index">02</span>
-            <div class="step-icon"><i class="bi bi-person-vcard"></i></div>
-            <h3>Abrís la ficha</h3>
-            <p>Todo el historial del paciente en segundos.</p>
-          </div>
-          <div class="workflow-connector"></div>
-          <div class="workflow-step featured">
-            <span class="step-index">03</span>
-            <div class="step-icon"><i class="bi bi-body-text"></i></div>
-            <h3>Registrás</h3>
-            <p>Marcás el segmento, la técnica y la evolución.</p>
-          </div>
-          <div class="workflow-connector"></div>
-          <div class="workflow-step">
-            <span class="step-index">04</span>
-            <div class="step-icon"><i class="bi bi-graph-up-arrow"></i></div>
-            <h3>Seguís</h3>
-            <p>La próxima sesión empieza donde terminó la anterior.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <section class="contact section-light" id="contact">
       <div class="container contact-grid">
         <div class="contact-copy">
           <span class="section-kicker">¿TENÉS DUDAS?</span>
           <h2>Hablemos de<br><span>tu consultorio.</span></h2>
           <p>Si querés conocer mejor QuiroNexus, consultar sobre los planes o contarnos cómo trabajás hoy, escribinos.</p>
-          <div class="contact-detail"><i class="bi bi-envelope"></i><span>quironexus@gmail.com</span></div>
+          <div class="contact-detail"><i class="bi bi-envelope"></i><span>quironexuslp@gmail.com</span></div>
           <div class="contact-detail"><i class="bi bi-geo-alt"></i><span>Argentina</span></div>
         </div>
 
         <form class="contact-form" id="contactForm" novalidate>
           <div class="form-row">
-            <label>Nombre y apellido<input type="text" name="name" required autocomplete="name"></label>
             <label>Email<input type="email" name="email" required autocomplete="email"></label>
+            <label>Nombre y apellido<input type="text" name="name" required autocomplete="name"></label>
           </div>
           <div class="form-row">
             <label>Tipo de consultorio
@@ -385,7 +348,7 @@
     <div class="container footer-inner">
       <a class="brand" href="#hero"><img src="Logo-sintexto.png" alt="" class="brand-logo" aria-hidden="true"><span>Quiro<span>Nexus</span></span></a>
       <p>Gestión para consultorios de quiropraxia.</p>
-      <div class="footer-links"><a href="#producto">Producto</a><a href="#funciones">Funciones</a><a href="#precios">Precios</a><a href="https://app.quironexus.com/">Ingresar</a><a href="mailto:quironexus@gmail.com">Contacto</a></div>
+      <div class="footer-links"><a href="#funciones">Funciones</a><a href="#como-funciona">Cómo funciona</a><a href="#precios">Precios</a><a href="#contact">Consultas</a><a href="https://app.quironexus.com/">Iniciar sesión</a></div>
       <div class="copyright">© 2026 QuiroNexus · Argentina.</div>
     </div>
   </footer>
