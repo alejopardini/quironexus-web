@@ -80,8 +80,8 @@
       const clinic = form.elements.clinic.value;
       const city = form.elements.city.value.trim();
       const message = form.elements.message.value.trim();
-      if(!name || !email){
-        note.textContent='Completá tu nombre y email para continuar.';
+      if(!name || !email || !clinic){
+        note.textContent='Completá tu nombre, email y tipo de consultorio para continuar.';
         note.style.color='#b94a48';
         return;
       }

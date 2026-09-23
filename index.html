@@ -125,7 +125,7 @@
 
     <section class="funciones section-light" id="funciones">
       <div class="container">
-        <div class="section-heading">
+        <div class="section-heading left-stack">
           <div>
             <span class="section-kicker">TODO TU CONSULTORIO, CONECTADO</span>
             <h2><span>Todo lo que tu práctica necesita</span><br>en un solo lugar.</h2>
@@ -249,7 +249,7 @@
             <span class="pricing-label">PARA EMPEZAR</span>
             <h3>Independiente</h3>
             <p class="pricing-description">Quiroprácticos que trabajan de manera individual.</p>
-            <div class="pricing-price"><strong>$20.000</strong><span class="price-period">ARS<em>/m</em></span></div>
+            <div class="pricing-price"><strong>$20.000</strong><span class="price-period">ARS<em>/mes</em></span></div>
             <ul>
               <li><i class="bi bi-check2"></i> 1 profesional</li>
               <li><i class="bi bi-check2"></i> 1 sede</li>
@@ -262,7 +262,7 @@
             <span class="pricing-label">EQUIPO</span>
             <h3>Consultorio</h3>
             <p class="pricing-description">Equipos pequeños que comparten pacientes y organización.</p>
-            <div class="pricing-price"><strong>$30.000</strong><span class="price-period">ARS<em>/m</em></span></div>
+            <div class="pricing-price"><strong>$30.000</strong><span class="price-period">ARS<em>/mes</em></span></div>
             <ul>
               <li><i class="bi bi-check2"></i> Hasta 3 profesionales</li>
               <li><i class="bi bi-check2"></i> Hasta 2 sedes</li>
@@ -275,7 +275,7 @@
             <span class="pricing-label">RECOMENDADO</span>
             <h3>Clínica</h3>
             <p class="pricing-description">Organizaciones con varios profesionales y más estructura.</p>
-            <div class="pricing-price"><strong>$40.000</strong><span class="price-period">ARS<em>/m</em></span></div>
+            <div class="pricing-price"><strong>$40.000</strong><span class="price-period">ARS<em>/mes</em></span></div>
             <ul>
               <li><i class="bi bi-check2"></i> Hasta 5 profesionales</li>
               <li><i class="bi bi-check2"></i> Hasta 2 sedes</li>
@@ -288,7 +288,7 @@
             <span class="pricing-label">MAYOR ESTRUCTURA</span>
             <h3>Clínica Plus</h3>
             <p class="pricing-description">Clínicas que necesitan mayor capacidad y más sedes.</p>
-            <div class="pricing-price"><strong>$75.000</strong><span class="price-period">ARS<em>/m</em></span></div>
+            <div class="pricing-price"><strong>$75.000</strong><span class="price-period">ARS<em>/mes</em></span></div>
             <ul>
               <li><i class="bi bi-check2"></i> Hasta 10 profesionales</li>
               <li><i class="bi bi-check2"></i> Hasta 3 sedes</li>
@@ -324,19 +324,22 @@
 
         <form class="contact-form" id="contactForm" novalidate>
           <div class="form-row">
-            <label>Email<input type="email" name="email" required autocomplete="email"></label>
-            <label>Nombre y apellido<input type="text" name="name" required autocomplete="name"></label>
+            <label>Email<input type="email" name="email" placeholder="Escribí tu email..." required autocomplete="email"></label>
+            <label>Nombre y apellido<input type="text" name="name" placeholder="Escribí nombre y apellido..." required autocomplete="name"></label>
           </div>
           <div class="form-row">
             <label>Tipo de consultorio
-              <select name="clinic">
-                <option value="individual">Profesional individual</option>
-                <option value="equipo">Equipo de varios profesionales</option>
-              </select>
+              <div class="select-wrap">
+                <select name="clinic" required defaultValue="">
+                  <option value="" disabled selected>Seleccioná tipo de consultorio...</option>
+                  <option value="individual">Profesional individual</option>
+                  <option value="equipo">Equipo de varios profesionales</option>
+                </select>
+              </div>
             </label>
-            <label>Ciudad<input type="text" name="city" autocomplete="address-level2"></label>
+            <label>Ciudad<input type="text" name="city" placeholder="Escribí ciudad..." autocomplete="address-level2"></label>
           </div>
-          <label>Contanos cómo trabajás hoy <span>(opcional)</span><textarea name="message" rows="4"></textarea></label>
+          <label>Contanos cómo trabajás hoy <span>(opcional)</span><textarea name="message" rows="4" placeholder="Contanos cuántos profesionales trabajan, cómo organizan los turnos o qué te gustaría resolver con QuiroNexus..."></textarea></label>
           <button class="btn btn-primary btn-submit" type="submit">Enviar consulta <i class="bi bi-arrow-right"></i></button>
           <p class="form-note" id="formNote" role="status"></p>
         </form>
@@ -346,10 +349,7 @@
 
   <footer class="footer">
     <div class="container footer-inner">
-      <a class="brand" href="#hero"><img src="Logo-sintexto.png" alt="" class="brand-logo" aria-hidden="true"><span>Quiro<span>Nexus</span></span></a>
-      <p>Gestión para consultorios de quiropraxia.</p>
-      <div class="footer-links"><a href="#funciones">Funciones</a><a href="#como-funciona">Cómo funciona</a><a href="#precios">Precios</a><a href="#contact">Consultas</a><a href="https://app.quironexus.com/">Iniciar sesión</a></div>
-      <div class="copyright">© 2026 QuiroNexus · Argentina.</div>
+      <div class="copyright">© 2026 QuiroNexus · Argentina. Desarrollado por Grupo Nexus.</div>
     </div>
   </footer>
 
