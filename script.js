@@ -43,17 +43,30 @@
     carouselNext.addEventListener('click', () => carouselRow.scrollBy({left: scrollByCard(), behavior:'smooth'}));
   }
 
-  // Módulo "Cómo funciona": tabs que cambian la etiqueta del panel de video.
+  // Módulo "Cómo funciona": tabs que cambian el video del reproductor.
   const tutorialNav = document.getElementById('tutorialNav');
+  const tutorialVideo = document.getElementById('tutorialVideo');
+  const videoFallback = document.getElementById('videoFallback');
   const videoFrameLabel = document.getElementById('videoFrameLabel');
-  const tutorialLabels = {
-    turno: 'Video: Nuevo turno',
-    paciente: 'Video: Nuevo paciente',
-    consulta: 'Video: Primera consulta',
-    ajuste: 'Video: Registrar ajuste',
-    profesional: 'Video: Agregar profesional y horarios'
+  const tutorialVideos = {
+    turno: { label: 'Nuevo turno', src: 'videos/nuevo-turno.mp4' },
+    paciente: { label: 'Nuevo paciente', src: 'videos/nuevo-paciente.mp4' },
+    consulta: { label: 'Primera consulta', src: 'videos/primera-consulta.mp4' },
+    ajuste: { label: 'Registrar ajuste', src: 'videos/registrar-ajuste.mp4' },
+    profesional: { label: 'Agregar profesional y horarios', src: 'videos/agregar-profesional-horarios.mp4' }
   };
-  if(tutorialNav && videoFrameLabel){
+  if(tutorialNav && tutorialVideo && videoFallback && videoFrameLabel){
+    const showFallback = label => {
+      videoFrameLabel.textContent = 'Video: ' + label;
+      tutorialVideo.hidden = true;
+      videoFallback.hidden = false;
+    };
+    let currentLabel = tutorialVideos.turno.label;
+    tutorialVideo.addEventListener('error', () => showFallback(currentLabel));
+    tutorialVideo.addEventListener('loadeddata', () => {
+      tutorialVideo.hidden = false;
+      videoFallback.hidden = true;
+    });
     tutorialNav.querySelectorAll('.tutorial-item').forEach(btn => {
       btn.addEventListener('click', () => {
         tutorialNav.querySelectorAll('.tutorial-item').forEach(b => {
@@ -62,7 +75,14 @@
         });
         btn.classList.add('active');
         btn.setAttribute('aria-selected','true');
-        videoFrameLabel.textContent = tutorialLabels[btn.dataset.tutorial] || 'Video';
+        const t = tutorialVideos[btn.dataset.tutorial];
+        if(!t) return;
+        currentLabel = t.label;
+        tutorialVideo.pause();
+        tutorialVideo.hidden = false;
+        videoFallback.hidden = true;
+        tutorialVideo.src = t.src;
+        tutorialVideo.load();
       });
     });
   }

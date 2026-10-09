@@ -228,9 +228,12 @@
           </div>
           <div class="tutorial-content">
             <div class="video-frame" id="videoFrame">
-              <i class="bi bi-play-circle"></i>
-              <span id="videoFrameLabel">Video: Nuevo turno</span>
-              <small>Tutoriales en video, disponibles cuando la app esté lista.</small>
+              <video id="tutorialVideo" controls playsinline preload="metadata" src="videos/nuevo-turno.mp4"></video>
+              <div class="video-fallback" id="videoFallback" hidden>
+                <i class="bi bi-play-circle"></i>
+                <span id="videoFrameLabel">Video: Nuevo turno</span>
+                <small>Tutoriales en video, disponibles cuando la app esté lista.</small>
+              </div>
             </div>
           </div>
         </div>
