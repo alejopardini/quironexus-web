@@ -49,8 +49,9 @@
   const tutorialLabels = {
     turno: 'Video: Nuevo turno',
     paciente: 'Video: Nuevo paciente',
-    consulta: 'Video: Nueva consulta',
-    ajuste: 'Video: Registrar ajuste'
+    consulta: 'Video: Primera consulta',
+    ajuste: 'Video: Registrar ajuste',
+    profesional: 'Video: Agregar profesional y horarios'
   };
   if(tutorialNav && videoFrameLabel){
     tutorialNav.querySelectorAll('.tutorial-item').forEach(btn => {
