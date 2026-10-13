@@ -87,10 +87,6 @@
     });
   }
 
-  // The spine image in the landing is intentionally demonstrative, not clickable.
-  // The real product lets the professional click individual vertebrae inside the app.
-  // We keep one representative adjustment fixed here: C5 + Thompson.
-
   const form = document.getElementById('contactForm');
   const note = document.getElementById('formNote');
   if(form){
